@@ -2,166 +2,546 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Câmeras de Segurança IP e Wi-Fi | Monitoramento 24h</title>
+<title>Câmeras de Segurança | Janiel Santos</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Instalação profissional de câmeras IP e Wi-Fi. Orçamento rápido, acesso pelo celular e segurança 24h.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Câmeras IP com acesso remoto pelo celular, monitoramento 24h e alta definição.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#f4f6f9;color:#222}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+
+body{
+background:radial-gradient(circle at top,#0f172a,#020617);
+color:#fff
+}
+
 a{text-decoration:none}
 
-header{
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url("https://images.unsplash.com/photo-1581091215367-59ab6c28c37f");
-background-size:cover;
-background-position:center;
-color:#fff;
-padding:90px 20px;
-text-align:center
+/* HEADER */
+.header{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(2,6,23,.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.05)
 }
 
-header h1{font-size:38px;font-weight:700}
-header p{margin:15px auto;max-width:700px;font-size:18px;opacity:.95}
+.header-content{
+max-width:1100px;
+margin:auto;
+padding:14px 16px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 30px;
+.logo{
+font-size:18px;
+font-weight:700
+}
+
+.logo span{color:#25d366}
+
+.header-btn{
 background:#25d366;
 color:#fff;
-font-weight:600;
-border-radius:30px;
-transition:.3s
-}
-.btn:hover{transform:scale(1.05)}
-
-section{padding:70px 20px;max-width:1200px;margin:auto}
-
-h2{text-align:center;font-size:32px;margin-bottom:50px;color:#0a2540}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.3s
-}
-.card:hover{transform:translateY(-8px)}
-
-.card h3{margin-bottom:12px;color:#0a2540}
-.card p{font-size:15px;line-height:1.6;color:#555}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px
-}
-
-.gallery img{
-width:100%;
-border-radius:15px;
-height:200px;
-object-fit:cover
-}
-
-.cta{
-background:#0a2540;
-color:#fff;
-text-align:center;
-padding:80px 20px
-}
-.cta h2{color:#fff}
-.cta p{font-size:18px;opacity:.95}
-
-footer{
-background:#0d1117;
-color:#aaa;
-padding:30px 20px;
-text-align:center
-}
-
-.social a{
-margin:0 10px;
-color:#fff;
+padding:8px 18px;
+border-radius:20px;
+font-size:13px;
 font-weight:600
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
+/* HERO */
+.hero{
+background:#020617;
+padding:40px 14px 30px
+}
+
+.hero-content{
+max-width:780px;
+margin:auto;
+text-align:center
+}
+
+.hero h1{
+font-size:30px;
+font-weight:700;
+line-height:1.1
+}
+
+.hero h1 span{color:#25d366}
+
+.hero p{
+margin:10px 0 14px;
+font-size:15px;
+color:#c7d2fe
+}
+
+.hero img{
+display:block;
+margin:18px auto 0;
+max-width:320px;
+width:100%;
+border-radius:14px
+}
+
+/* BOTÃO */
+.btn{
+margin-top:14px;
+padding:10px 22px;
 background:#25d366;
 color:#fff;
-padding:15px 18px;
-border-radius:50%;
+font-weight:600;
+border-radius:22px;
+display:inline-block;
+font-size:14px
+}
+
+/* SEÇÕES */
+section{
+max-width:1100px;
+margin:auto;
+padding:26px 14px
+}
+
+h2{
+text-align:center;
 font-size:22px;
-box-shadow:0 8px 20px rgba(0,0,0,.3)
+margin-bottom:18px
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:14px
+}
+
+.card{
+background:linear-gradient(145deg,#0b1220,#020617);
+padding:16px;
+border-radius:12px;
+box-shadow:0 8px 22px rgba(0,0,0,.6)
+}
+
+.card h3{
+display:flex;
+align-items:center;
+gap:8px;
+margin-bottom:8px;
+font-size:15px
+}
+
+.check{
+color:#25d366;
+font-size:16px;
+font-weight:700
+}
+
+.card p{
+color:#b8c1ec;
+font-size:13px;
+line-height:1.5
+}
+
+/* IMAGEM PRODUTO */
+.product-image{
+text-align:center;
+margin-top:6px
+}
+
+.product-image img{
+max-width:420px;
+width:100%;
+border-radius:16px;
+box-shadow:0 10px 28px rgba(0,0,0,.7)
+}
+
+/* CTA */
+.cta{
+background:#020617;
+text-align:center;
+padding:28px 14px
+}
+
+.cta h2{
+margin-bottom:6px;
+font-size:21px
+}
+
+.cta p{
+color:#c7d2fe;
+font-size:14px;
+margin-bottom:10px
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+text-align:center;
+padding:14px;
+color:#94a3b8;
+font-size:12px
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+right:12px;
+bottom:12px;
+background:#25d366;
+color:#fff;
+padding:12px 14px;
+border-radius:50%;
+font-size:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.6)
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Segurança de Verdade para Sua Casa ou Empresa</h1>
-<p>Instalação profissional de câmeras IP e Wi-Fi com acesso pelo celular, gravação 24h e suporte técnico.</p>
-<a href="https://wa.me/5599999999999" class="btn">Solicitar orçamento agora</a>
+<!-- CABEÇALHO PREMIUM -->
+<style>
+.header{
+position:sticky;
+top:0;
+z-index:999;
+background:linear-gradient(180deg,#020617 0%, #020617ee 100%);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-wrap{
+max-width:1200px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+align-items:center;
+justify-content:flex-start;
+}
+
+.brand{
+position:relative;
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.brand strong{
+font-size:20px;
+font-weight:900;
+letter-spacing:.6px;
+color:#fff;
+}
+
+.brand span{
+font-size:11px;
+letter-spacing:1.6px;
+text-transform:uppercase;
+color:#94a3b8;
+}
+
+/* LINHA NEON */
+.brand::after{
+content:'';
+width:54px;
+height:3px;
+border-radius:10px;
+background:linear-gradient(
+90deg,
+#25d366,
+#22c55e,
+#25d366
+);
+box-shadow:
+0 0 10px rgba(37,211,102,.7),
+0 0 20px rgba(37,211,102,.4);
+animation:neonMove 3s linear infinite;
+}
+
+/* ANIMAÇÃO SUAVE */
+@keyframes neonMove{
+0%{background-position:0%}
+100%{background-position:200%}
+}
+</style>
+
+<header class="header">
+  <div class="header-wrap">
+    <div class="brand">
+      <strong>Janiel Santos</strong>
+      <span>Segurança • Monitoramento • Tecnologia</span>
+    </div>
+  </div>
 </header>
 
+<!-- HERO -->
+<style>
+.hero{
+background:#020617;
+padding:40px 14px;
+text-align:center;
+color:#fff
+}
+
+.hero-content{
+max-width:760px;
+margin:auto
+}
+
+.hero-tag{
+display:inline-block;
+background:rgba(37,211,102,.15);
+color:#25d366;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+margin-bottom:14px
+}
+
+.hero-title{
+font-family:'Montserrat',sans-serif;
+font-size:34px;
+line-height:1.1;
+margin-bottom:10px
+}
+
+.hero-title span{color:#25d366}
+
+.hero p{
+font-size:14px;
+color:#c7d2fe;
+margin-bottom:16px
+}
+
+.hero img{
+max-width:320px;
+width:100%;
+border-radius:16px;
+margin:16px auto
+}
+
+/* CHECKBOX */
+.checkbox-termos{
+margin:10px 0;
+font-size:12px;
+color:#cbd5f5;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px
+}
+
+.checkbox-termos span{
+color:#25d366;
+cursor:pointer;
+text-decoration:underline
+}
+
+/* BOTÃO */
+.btn-orcamento{
+margin:10px auto 0;
+background:#f97316;
+color:#fff;
+padding:14px 34px;
+border-radius:28px;
+font-size:15px;
+font-weight:700;
+display:inline-block;
+box-shadow:0 8px 24px rgba(249,115,22,.45);
+transition:.3s
+}
+
+.btn-orcamento.disabled{
+opacity:.4;
+pointer-events:none
+}
+
+/* MODAL */
+.modal-termos{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(2,6,23,.85);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999
+}
+
+.modal-conteudo{
+background:#020617;
+padding:22px;
+border-radius:14px;
+max-width:520px;
+width:90%;
+color:#c7d2fe
+}
+
+.modal-conteudo h2{
+color:#fff;
+margin-bottom:10px
+}
+
+.modal-conteudo p{
+font-size:13px;
+line-height:1.5;
+margin-bottom:10px
+}
+
+.fechar-modal{
+background:#25d366;
+border:none;
+color:#fff;
+padding:8px 18px;
+border-radius:18px;
+cursor:pointer
+}
+</style>
+
+<div class="hero">
+  <div class="hero-content">
+
+    <h1 class="hero-title">
+      Veja sua casa<br>
+      <span>em tempo real</span><br>
+      direto do celular
+    </h1>
+
+    <p>
+      Câmeras IP com acesso remoto, visão noturna e alertas automáticos
+      para proteger o que é importante.
+    </p>
+
+    <img src="https://i.imgur.com/zByAcAK.png" alt="Câmeras de Segurança">
+
+    <label class="checkbox-termos">
+      <input type="checkbox" id="aceitarTermos">
+      Li e aceito os <span onclick="abrirTermos()">Termos de Uso</span>
+    </label>
+
+    <a id="btnOrcamento" class="btn-orcamento disabled" href="#">
+      Solicitar Orçamento
+    </a>
+
+  </div>
+</div>
+
+<div class="modal-termos" id="modalTermos">
+  <div class="modal-conteudo">
+    <h2>Termos de Uso</h2>
+    <p>O acesso remoto depende de conexão com a internet e correta instalação.</p>
+    <p>Não nos responsabilizamos por falhas de energia ou serviços de terceiros.</p>
+    <p>Ao aceitar, o cliente concorda com estes termos.</p>
+    <button class="fechar-modal" onclick="fecharTermos()">Fechar</button>
+  </div>
+</div>
+
+<script>
+const checkbox = document.getElementById('aceitarTermos');
+const botao = document.getElementById('btnOrcamento');
+
+checkbox.addEventListener('change', function(){
+  if(this.checked){
+    botao.classList.remove('disabled');
+    botao.href = 'https://wa.me/5599999999999';
+  }else{
+    botao.classList.add('disabled');
+    botao.href = '#';
+  }
+});
+
+function abrirTermos(){
+  document.getElementById('modalTermos').style.display = 'flex';
+}
+
+function fecharTermos(){
+  document.getElementById('modalTermos').style.display = 'none';
+}
+</script>
+
+<!-- PRODUTO -->
+<section class="product-image">
+  <img src="https://imgur.com/74Q8ZQc.png" alt="Câmera IP">
+</section>
+
+<!-- RECURSOS -->
 <section>
-<h2>Por que escolher nossos serviços?</h2>
+<h2>Recursos da Câmera</h2>
+
 <div class="cards">
+
 <div class="card">
-<h3>📷 Tecnologia Moderna</h3>
-<p>Câmeras IP e Wi-Fi em alta definição, visão noturna e acesso remoto pelo celular.</p>
+<h3><span class="check">✔</span> Conexão Wi-Fi</h3>
+<p>A câmera se conecta diretamente à sua rede Wi-Fi, sem necessidade de cabos de rede, facilitando a instalação e o uso.</p>
 </div>
+
 <div class="card">
-<h3>⚡ Instalação Profissional</h3>
-<p>Trabalho limpo, organizado e com posicionamento estratégico para máxima segurança.</p>
+<h3><span class="check">✔</span> Gravação em Alta Definição</h3>
+<p>Imagens em alta resolução que permitem identificar rostos, placas e detalhes importantes com mais clareza.</p>
 </div>
+
 <div class="card">
-<h3>🔒 Monitoramento 24h</h3>
-<p>Acompanhe tudo em tempo real, de onde estiver, com total controle.</p>
+<h3><span class="check">✔</span> Visão Noturna Infravermelha</h3>
+<p>Permite monitoramento contínuo mesmo à noite ou em ambientes com pouca iluminação.</p>
 </div>
+
 <div class="card">
-<h3>💬 Suporte e Orçamento Rápido</h3>
-<p>Atendimento direto pelo WhatsApp, sem enrolação.</p>
+<h3><span class="check">✔</span> LEDs Integrados</h3>
+<p>Iluminação automática no período noturno, ajudando a afastar invasores e melhorar a imagem.</p>
 </div>
+
+<div class="card">
+<h3><span class="check">✔</span> Áudio Bidirecional</h3>
+<p>Possibilita ouvir o ambiente e falar através da câmera usando o aplicativo no celular.</p>
+</div>
+
+<div class="card">
+<h3><span class="check">✔</span> Detecção de Movimento</h3>
+<p>Envia alertas instantâneos para o celular sempre que detectar movimentação suspeita.</p>
+</div>
+
+<div class="card">
+<h3><span class="check">✔</span> Gravação em Cartão SD ou Nuvem</h3>
+<p>Escolha entre armazenar as gravações localmente no cartão SD ou de forma segura na nuvem.</p>
+</div>
+
+<div class="card">
+<h3><span class="check">✔</span> Acesso Remoto</h3>
+<p>Acompanhe tudo em tempo real de qualquer lugar, usando apenas o celular e internet.</p>
+</div>
+
+<div class="card">
+<h3><span class="check">✔</span> Visão Panorâmica 360°</h3>
+<p>Movimentação horizontal e vertical que cobre todo o ambiente, eliminando pontos cegos.</p>
+</div>
+
+<div class="card">
+<h3><span class="check">✔</span> Alarme Integrado</h3>
+<p>Alarme sonoro que pode ser acionado pelo aplicativo para espantar invasores.</p>
+</div>
+
 </div>
 </section>
 
-<section>
-<h2>Alguns Trabalhos Realizados</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
-<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
-<img src="https://images.unsplash.com/photo-1603791452906-baf0d2a03b15">
-<img src="https://images.unsplash.com/photo-1614064548018-7f5b4a5c7c92">
+<!-- CTA -->
+<div class="cta">
+<h2>Segurança completa na palma da mão</h2>
+<p>Entre em contato agora mesmo pelo WhatsApp</p>
+<a class="btn" href="https://wa.me/5599999999999">Falar agora</a>
 </div>
-</section>
-
-<section class="cta">
-<h2>Proteja o que é importante</h2>
-<p>Solicite agora seu orçamento e tenha segurança de verdade.</p>
-<a href="https://wa.me/5599999999999" class="btn">Falar no WhatsApp</a>
-</section>
 
 <footer>
-<p>© 2026 • Especialistas em Câmeras de Segurança</p>
-<div class="social">
-<a href="https://instagram.com/seuinstagram" target="_blank">Instagram</a>
-</div>
+<p>© 2026 • Janiel Santos</p>
 </footer>
 
-<a href="https://wa.me/5599999999999" class="whatsapp">💬</a>
+<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
 
 </body>
 </html>
